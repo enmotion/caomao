@@ -1,0 +1,326 @@
+@charset "utf-8";
+/* CSS Document */
+/*------------------------------------------------------------------------------------------------------GlobalSet*/
+/*---------归整---*/
+
+html{
+	font-family: "微软雅黑","Heiti SC";
+}
+
+html,body,header,section,footer,div,ul,ol,li,img,a,span,em,del,legend,center,strong,var,fieldset,form,label,dl,dt,dd,cite,input,hr,time,mark,code,figcaption,figure,textarea,h1,h2,h3,h4,h5,h6,p{
+	margin:0;
+	border:0;
+	padding:0;
+	box-sizing: border-box;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	font-style:normal;
+}
+
+body,html{height: 100%;}
+body{font-size:62.5%;}
+
+html,body {
+	-webkit-touch-callout:none;
+	-webkit-text-size-adjust:none;
+	-webkit-tap-highlight-color:rgba(0, 0, 0, 0);
+	/*-webkit-user-select:none;*/
+	background-color: #fff;
+}
+
+nav,article,aside,details,main,header,footer,section,fieldset,figcaption,figure{display: block;}
+img,a,button,em,del,strong,var,label,cite,small,time,mark,code,textarea{display:inline-block;}
+header,section,footer {position:relative;}
+ol,ul{list-style:none;}
+input,button,textarea {
+	border:0;
+	margin:0;
+	padding:0;
+	font-size:1em;
+	line-height:1em;
+	-webkit-appearance:none;
+	outline: none;
+	background-color:rgba(0, 0, 0, 0);
+}
+span{display:inline-block;}
+a:active, a:hover {outline: 0;}
+a, a:visited{
+	color:inherit;
+	text-decoration:none;
+}
+
+label, .wordWrap{
+    word-wrap: break-word;
+    word-break: break-all;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+td,th {padding: 0;}
+.clearfix:after{
+	content: ' ';
+	display: block;
+	clear: both;
+	visibility:hidden;
+	line-height: 0;
+	height:0;
+}
+.loading_more{
+	display: block;
+	height: 1.5em;
+	width: 100%;
+}
+.loading_more:before {
+	display: inline-block; vertical-align: text-bottom;
+	content: ' '; height: 16px; width: 16px; margin-right: 6px;
+	background: url(../image/loading_more.gif) no-repeat center;
+	-webkit-background-size: contain;
+	background-size: contain;
+} 
+.loading_more:after {content: '加载更多';	}
+
+img {display: block;}
+
+.cover-c-img{object-fit: cover;}
+h1,h2,h3,h4,h5,h6,p{
+	display:inline-block;
+	font-weight: 100;
+	color:inherit;
+	font-family:inherit;
+	margin:0px;
+	padding:0px;
+}
+textarea{
+	resize: none;
+}
+input{
+	width: 100%;
+	border-radius: 0px;
+	outline: none;
+	appearance: none;
+	-webkit-border-radius: 0px;
+	-webkit-appearance: none;
+}
+/*---------------------------------------------------------------------------------------------------------*/
+.pointer{cursor: pointer;
+}
+[v-cloak]{display: none !important;}
+.alpha-0{
+	opacity: 0;
+	-webkit-opacity: 0;
+}
+/*------------------------------------------------------------------------------------------------------Text*/
+.text-bold{font-weight: bold !important;}
+.text-small{font-size: 75% !important;}
+.text-big{font-size: 125% !important;}
+.text-linethrough{text-decoration: line-through !important;}
+.text-i{font-style: italic !important;}
+.text-left {text-align: left !important;}
+.text-right {text-align: right !important;}
+.text-center {text-align: center !important;}
+.text-limit{
+	text-overflow:ellipsis;
+	white-space:nowrap;
+	overflow:hidden;	
+}
+/*------------------------------------------------------------------------------------------------------AlignBlock*/
+.pull-right {float: right !important;}
+.pull-left {float: left !important;}
+.pull-center{
+	display: block !important;
+	margin-left: auto !important;
+	margin-right: auto !important;
+}
+.stick-top{
+	position: fixed;
+	z-index: 2;
+	top: 0px;
+	left: 0px;
+}
+.stick-bottom{
+	position: fixed;
+	z-index: 2;
+	bottom: 0px;
+	left: 0px;
+}
+/*------------------------------------------------------------------------------------------------------Display*/
+.hide {display: none !important;}
+.show {display: block !important;}
+.masker{overflow: hidden !important;}
+.inline{display: inline-block !important;}
+.show-border{border: 1px solid #FFAA00 !important;}
+/*container-css--------------------------------------------------------------------------------------------------------------------------------------------------*/
+.x-box{
+	display: flex;
+	display: -webkit-flex;
+	flex-direction: inherit;
+	-webkit-flex-direction: inherit;
+}
+.x-box-row{
+	display: flex;
+	display: -webkit-flex;
+	flex-direction: row;
+	-webkit-flex-direction: row;
+}
+.x-box-rowr{
+	display: flex;
+	display: -webkit-flex;
+	flex-direction: row-reverse;
+	-webkit-flex-direction: row-reverse;
+}
+.x-box-col{
+	display: flex;
+	display: -webkit-flex;
+	flex-direction: column;
+	-webkit-flex-direction: column;
+}
+.x-box-colr{
+	display: flex;
+	display: -webkit-flex;
+	flex-direction: column-reverse;
+	-webkit-flex-direction: column-reverse;
+}
+.x-wrap{flex-wrap: wrap;-webkit-flex-wrap: wrap; height: auto;width: auto;}
+.x-nowrap{flex-wrap: nowrap; -webkit-flex-wrap: nowrap;}
+.x-warp-r{flex-wrap: wrap-reverse;-webkit-flex-wrap: wrap-reverse;}
+/*layout-css---------------------------------------------------------------------------------------------------------------------------------------*/
+.x-pull-tl,.x-pull-cl,.x-pull-bl,.x-pull-tc,.x-pull-cc,.x-pull-bc,.x-pull-tr,.x-pull-cr,.x-pull-br{
+	display: flex;
+	display: -webkit-flex;
+	flex-direction: column;
+	-webkit-flex-direction: column;
+}
+.x-pull-cl{	
+	justify-content: center;
+	align-items:flex-start;
+	-webkit-justify-content: center;
+	-webkit-align-items: flex-start;
+}
+.x-pull-tl{
+	justify-content:flex-start;
+	align-items: flex-start;
+	-webkit-justify-content: flex-start;
+	-webkit-align-items: flex-start;
+}
+.x-pull-bl{
+	justify-content:flex-end;
+	align-items: flex-start;
+	-webkit-justify-content:flex-end;
+	-webkit-align-items: flex-start;
+}
+.x-pull-cc{
+	justify-content: center;
+	align-items: center;
+	-webkit-justify-content: center;
+	-webkit-align-items: center;	
+}
+.x-pull-tc{
+	justify-content:flex-start;
+	align-items: center;	
+	-webkit-justify-content:flex-start;
+	-webkit-align-items: center;
+}
+.x-pull-bc{
+	justify-content:flex-end;
+	align-items: center;
+	-webkit-justify-content:flex-start;
+	-webkit-align-items: center;
+}
+.x-pull-cr{
+	justify-content: center;
+	align-items: flex-end;	
+	-webkit-justify-content:flex-start;
+	-webkit-align-items: center;
+}
+.x-pull-tr{
+	justify-content:flex-start;
+	align-items: flex-end;	
+	-webkit-justify-content:flex-start;
+	-webkit-align-items: center;
+}
+.x-pull-br{
+	justify-content:flex-end;
+	align-items: flex-end;	
+	-webkit-justify-content:flex-start;
+	-webkit-align-items: center;
+}
+/*position-css--------------------------------------------------------------------------------------------------------------------------------------*/
+.x-j-c{
+	justify-content: center;
+	-webkit-justify-content:center;
+}
+.x-j-s{
+	justify-content: flex-start;
+	-webkit-justify-content:flex-start;
+}
+.x-j-e{justify-content: flex-end;
+}
+.x-j-sr{justify-content: space-around;
+}
+.x-j-sb{justify-content: space-between;
+}
+.x-a-c{align-items: center;
+}
+.x-a-s{align-items: flex-start;
+}
+.x-a-e{align-items: flex-end;
+}
+.x-a-b{align-items: baseline;
+}
+/*布局中等高*/
+.x-a-str{
+	-webkit-align-items: stretch;
+	align-items: stretch;
+}
+
+.x-alcon-c{align-content: center;}
+.x-alcon-s{align-content: flex-start;}
+.x-alcon-e{align-content: flex-end;}
+.x-alcon-sa{align-content: space-around;}
+.x-alcon-sb{align-content: space-between;}
+/*order-css--------------------------------------------------------------------------------------------------------------------------------------*/
+.x-od1{order: 1;}
+.x-od2{order: 2;}
+.x-od3{order: 3;}
+.x-od4{order: 4;}
+.x-od5{order: 5;}
+.x-od6{order: 6;}
+
+.x-g0{flex-grow: 0;}
+.x-g1{flex-grow: 1;}
+.x-g2{flex-grow: 2;}
+.x-g3{flex-grow: 3;}
+.x-g4{flex-grow: 4;}
+.x-g5{flex-grow: 5;}
+.x-g6{flex-grow: 6;}
+.x-g7{flex-grow: 7;}
+.x-g8{flex-grow: 8;}
+.x-g9{flex-grow: 9;}
+.x-g10{flex-grow: 10;}
+.x-g11{flex-grow: 11;}
+.x-g12{flex-grow: 12;}
+
+.x-s0{flex-shrink: 0;}
+.x-s1{flex-shrink: 1;}
+.x-s2{flex-shrink: 2;}
+.x-s3{flex-shrink: 3;}
+.x-s4{flex-shrink: 4;}
+.x-s5{flex-shrink: 5;}
+.x-s6{flex-shrink: 6;}
+.x-s7{flex-shrink: 7;}
+.x-s8{flex-shrink: 8;}
+.x-s9{flex-shrink: 9;}
+.x-s10{flex-shrink: 10;}
+.x-s11{flex-shrink: 11;}
+.x-s12{flex-shrink: 12;}
+
+.x-sg0{
+	flex-grow: 0;
+	flex-shrink: 0;	
+}
+
+.x-alself-b{align-self: baseline;}
+.x-alself-c{align-self: center;}
+.x-alself-s{align-self: flex-start;}
+.x-alself-e{align-self: flex-end;}
+.x-alself-str{align-self: stretch;}
